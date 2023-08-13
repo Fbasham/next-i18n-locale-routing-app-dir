@@ -3,12 +3,20 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function LanguageToggle() {
+type Props = {
+  lng: string;
+};
+
+export default function LanguageToggle({ lng }: Props) {
   const path = usePathname().slice(3);
   return (
     <div>
-      <Link href={`/en/${path}`}>en</Link>
-      <Link href={`/fr/${path}`}>fr</Link>
+      <Link
+        href={`/${lng === "en" ? "fr" : "en"}/${path}`}
+        className="underline text-blue-900 hover:text-blue-950"
+      >
+        {lng === "en" ? "Français" : "English"}
+      </Link>
     </div>
   );
 }

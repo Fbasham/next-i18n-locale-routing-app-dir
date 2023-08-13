@@ -6,5 +6,11 @@ type PageProps = {
 
 export default async function About({ params: { lng } }: PageProps) {
   const { t } = await useTranslation(lng, "about");
-  return <>{t("title")}</>;
+  return (
+    <>
+      <title>{t("title")}</title>
+
+      <h1 className="text-xl font-bold">{t("title")}</h1>
+    </>
+  );
 }
