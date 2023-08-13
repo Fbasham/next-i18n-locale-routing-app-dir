@@ -1,3 +1,5 @@
+import "@/app/global.css";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className="w-full h-[100vh]">{children}</body>
     </html>
   );
 }
