@@ -1,8 +1,6 @@
-"use client";
-
 import "@/app/global.css";
-import LanguageToggle from "@/components/LanguageToggle";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -18,6 +16,7 @@ export default function Layout({ children, params: { lng } }: LayoutProps) {
       <body>
         <Navbar lng={lng} />
         <main className="max-w-5xl mx-auto mt-10">{children}</main>
+        <Footer lng={lng} />
       </body>
     </html>
   );
