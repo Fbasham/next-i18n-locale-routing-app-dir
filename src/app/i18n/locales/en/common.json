@@ -3,5 +3,8 @@
     "terms-and-conditions": "Term and conditions",
     "toc-link": "https://www.canada.ca/en/transparency/terms.html",
     "privacy": "Privacy",
-    "privacy-link": "https://www.canada.ca/en/transparency/privacy.html"
+    "privacy-link": "https://www.canada.ca/en/transparency/privacy.html",
+
+    "home": "home",
+    "about": "about"
 }

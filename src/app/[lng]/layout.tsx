@@ -1,13 +1,17 @@
 import "@/app/global.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 type LayoutProps = {
   children: React.ReactNode;
   params: { lng: string };
 };
 
-export default function Layout({ children, params: { lng } }: LayoutProps) {
+export default async function Layout({
+  children,
+  params: { lng },
+}: LayoutProps) {
   return (
     <html lang={lng}>
       <head>
@@ -15,7 +19,10 @@ export default function Layout({ children, params: { lng } }: LayoutProps) {
       </head>
       <body>
         <Navbar lng={lng} />
-        <main className="max-w-5xl mx-auto mt-10">{children}</main>
+        <main className="max-w-5xl mx-auto mt-10 px-5">
+          <Breadcrumb />
+          {children}
+        </main>
         <Footer lng={lng} />
       </body>
     </html>
