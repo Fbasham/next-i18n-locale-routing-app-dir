@@ -1,5 +1,3 @@
-"use client";
-
 import LanguageToggle from "@/components/LanguageToggle";
 
 type Props = {

@@ -1,7 +1,7 @@
 import "@/app/global.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import BreadcrumbClient from "@/components/BreadcrumbClient";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ export default async function Layout({
       <body>
         <Navbar lng={lng} />
         <main className="max-w-5xl mx-auto mt-10 px-5">
-          <Breadcrumb />
+          <BreadcrumbClient lng={lng} />
           {children}
         </main>
         <Footer lng={lng} />
